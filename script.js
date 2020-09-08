@@ -4,7 +4,7 @@ let body = document.getElementsByTagName("body") [0];
 let button = document.getElementById("Button");
 // Variabler från index
 let Utlogg = document.createElement("button");
-Utlogg.innerHTML = "Logga ut!"
+Utlogg.innerHTML = "Logga ut!";
 //skapar knapp i scriptet
 let namn = User.value;
 let losen = Pass.value;
@@ -12,14 +12,14 @@ let losen = Pass.value;
 
 
 if(localStorage.length == 1){
-    //lägger till knapp + text
     document.getElementById("div").innerHTML = "<h1>Du är redan inloggad, Välkommen!</h1>";
-    body.appendChild(Utlogg)
+    body.appendChild(Utlogg);
+    //lägger till knapp + text
     Utlogg.addEventListener("click", function()
     {
-        //rensar localstorage och startar om sidan
         localStorage.clear();
         location.reload();
+        //rensar localstorage och startar om sidan
     })
 }
 
@@ -42,12 +42,14 @@ button.addEventListener("click", function()
     }
     else
     {
-        document.getElementById("div").innerHTML = "<h1>Fel kod du får testa igen!</h1>"
-        let testIgen = document.createElement("button")
-        testIgen.innerHTML = "Testa igen"
-        body.appendChild(testIgen)
+        document.getElementById("div").innerHTML = "<h1>Fel kod du får testa igen!</h1>";
+        let testIgen = document.createElement("button");
+        testIgen.innerHTML = "Testa igen";
+        body.appendChild(testIgen);
+        //skapar en knapp om man har fel
         testIgen.addEventListener("click", function(){
-            location.reload();
+        location.reload();
+        //knappens funktion
         })
 
         
