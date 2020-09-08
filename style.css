@@ -2,12 +2,19 @@ html
 {
     background-color: lightblue;
 }
-
 body
 {
+    text-align: center;
     margin: auto;
     width: 50%;
     border: 5px solid black;
     padding: 30px;
     background-color: white
+}
+div{
+    margin: auto;
+    width: 50%;
+    padding: 30px;
+    background-color: white
+
 }
