@@ -1,5 +1,5 @@
-let User = document.getElementById("Anvandare").value;
-let Pass = document.getElementById("losen").value;
+let User = document.getElementById("Anvandare");
+let Pass = document.getElementById("losen");
 let body = document.getElementsByTagName("body")[0];
 let button = document.getElementById("Button");
 // Variabler från index
@@ -23,12 +23,13 @@ if(localStorage.length == 1){
 else{
 button.addEventListener("click", function()
 {
-    console.log(User + Pass)
+    const namn = User.value;
+    const losen = Pass.value;
     
-    if(User == "test" && Pass == "1234")
+    if(namn == "test" && losen == "1234")
     {
         document.getElementById("div").innerHTML = "<h1>Du är inloggad, Välkommen!</h1>";
-        localStorage.setItem(Pass, Pass);
+        localStorage.setItem(Pass, losen);
         body.appendChild(Utlogg);
         Utlogg.addEventListener("click", function()
     {
@@ -40,7 +41,6 @@ button.addEventListener("click", function()
     {
         document.getElementById("div").innerHTML = "<h1>Fel kod du får testa igen!</h1>";
         let testIgen = document.createElement("button");
-        console.log(localStorage)
         testIgen.innerHTML = "Testa igen";
         body.appendChild(testIgen);
         //skapar en knapp om man har fel
